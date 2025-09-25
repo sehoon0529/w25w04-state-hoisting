@@ -2,14 +2,21 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count1, setCount1] = useState(0)
+  const [count2, setCount2] = useState(0)
 
   return (
     <div>
       <Counter
         count={count}
         onIncrement={
-          () => setCount(prev => prev + 1)
+          () => setCount1(prev => prev + 1)
+        }
+      />
+      <Counter
+        count={count}
+        onIncrement={
+          () => setCount2(prev => prev + 1)
         }
       />
     </div>
